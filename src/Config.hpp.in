@@ -1,0 +1,6 @@
+//
+// Created by ehrustic on 06/04/18.
+//
+
+#define ISAE_ML_VERSION_MAJOR @ISAE_ML_VERSION_MAJOR@
+#define ISAE_ML_VERSION_MINOR @ISAE_ML_VERSION_MINOR@
