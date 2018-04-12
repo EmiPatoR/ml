@@ -4,8 +4,10 @@
 
 #include <iostream>
 #include <cassert>
-#include <UTILS/AbstractFactory.hpp>
+#include <AbstractFactory.hpp>
+#include <Version.hpp>
 #include <memory>
+#include <Config.hpp>
 
 class Test {
 public:

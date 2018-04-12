@@ -7,7 +7,7 @@
 
 /*!
  * \file Activation.hpp
- * \brief Base abstract class for activation functions
+ * \brief Definition of Base abstract class for activation functions
  * \author HRUSTIC Emir
  * \version 0.1
  */
@@ -19,7 +19,7 @@ namespace ISAE_ML {
         class Activation {
 
         protected:
-            std::string name;
+            std::string _name;
 
 
         public:

@@ -14,11 +14,10 @@ namespace ISAE_ML {
     namespace UTILS {
         template<class Key, class Object, class... Args>
         class AbstractFactory {
+
         public:
             using Creator = std::function<Object(Args...)>;
-
             void Register(Key const &key, Creator const &creator);
-
             Object Create(Key const &key, Args &&... args);
 
         private:

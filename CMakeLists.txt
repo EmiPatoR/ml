@@ -21,7 +21,7 @@ set(CMAKE_BUILD_TYPE Release)
 set(CMAKE_CXX_STANDARD 11)
 set(DIST_DIR "${CMAKE_PROJECT_NAME}")
 
-option(GPU "Use of CUDA Library" ON)
+option(GPU "Use of CUDA Library" OFF)
 option(OPENCV "Use of OpenCV Library" ON)
 
 if (GPU)
@@ -40,9 +40,20 @@ add_subdirectory(doc)
 
 add_subdirectory(tests)
 enable_testing()
-add_test(NAME AbstractFactoryTest
-        COMMAND AbstractFactoryTest
-        )
+
+file(
+        GLOB
+        unit_tests
+        tests/*.cpp
+)
+
+foreach (t ${unit_tests})
+    get_filename_component(testName ${t} NAME_WE)
+    add_test(NAME ${testName}
+            COMMAND ${testName}
+            )
+endforeach (t)
+
 
 add_custom_target(dist
         COMMAND rm -rf ${DIST_DIR}

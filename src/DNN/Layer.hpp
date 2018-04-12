@@ -6,6 +6,14 @@
 #define ISAE_ML_LAYER_H
 
 
+/*!
+ * \file Layer.hpp
+ * \brief Implementation of Base abstract class for activation functions
+ * \author HRUSTIC Emir
+ * \version @@
+ */
+
+
 #include <functional>
 
 namespace ISAE_ML {

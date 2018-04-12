@@ -4,11 +4,11 @@
 
 /*!
  * \file Activation.hpp
- * \brief Implementation of common methods of the Activation abstract class
+ * \brief implementation of Base abstract class for activation functions
  * \author HRUSTIC Emir
  * \version 0.1
  */
 
 #include "Activation.hpp"
 
-std::string ISAE_ML::DNN::Activation::getName() { return this->name; }
+std::string ISAE_ML::DNN::Activation::getName() { return this->_name; }
