@@ -21,7 +21,7 @@ set(CMAKE_BUILD_TYPE Release)
 set(CMAKE_CXX_STANDARD 11)
 set(DIST_DIR "${CMAKE_PROJECT_NAME}")
 
-option(GPU "Use of CUDA Library" OFF)
+option(GPU "Use of CUDA Library" ON)
 option(OPENCV "Use of OpenCV Library" ON)
 
 if (GPU)
@@ -52,6 +52,7 @@ foreach (t ${unit_tests})
     add_test(NAME ${testName}
             COMMAND ${testName}
             )
+
 endforeach (t)
 
 

@@ -7,8 +7,10 @@
 #include <boost/test/included/unit_test.hpp>
 #include "TestObj.hpp"
 
-#define private public // for testing purpose
-#include <UTILS/AbstractFactory.hpp>
+#define private public // for testing purpose on AbstractFactory class
+#include <AbstractFactory.hpp>
+
+
 
 
 struct Fixture{

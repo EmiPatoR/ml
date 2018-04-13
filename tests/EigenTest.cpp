@@ -13,11 +13,13 @@
 
 struct Fixture{
 
-    Eigen::MatrixXd m = Eigen::MatrixXd::Constant(3,3,1.0); // Creates a ones 3x3 double matrix
-    Eigen::VectorXd v = Eigen::VectorXd::Constant(3,1.0); // Creates a ones 3x1 vector
+    Eigen::MatrixXd m; // Creates a ones 3x3 double matrix
+    Eigen::VectorXd v; // Creates a ones 3x1 vector
 
     Fixture(){
         BOOST_TEST_MESSAGE("Setup Fixture");
+        m = Eigen::MatrixXd::Constant(3,3,1.0);
+        v = Eigen::VectorXd::Constant(3,1.0);
     }
 
     ~Fixture(){
